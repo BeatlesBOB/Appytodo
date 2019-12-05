@@ -1,31 +1,33 @@
 <resources>
-    <string name="app_name">"TestFireBase"</string>
+    <string name="app_name">T"estFireBase"</string>
     <string name="login">"Login"</string>
     <string name="textEmail">"Addrese email"</string>
     <string name="textPassword">"Code de passe"</string>
     <string name="btnLogin">"Connexion"</string>
     <string name="btnRegistre">"S'enregistrer"</string>
-
+    <string name="title_activity_home">""</string>
 
     <string name="textEnregistrer">"Creer une compte"</string>
+    <string name="UserFirstName">"Prenom d'utilisateur"</string>
+    <string name="UserLastName">"Nom d'utilisateur"</string>
     <string name="UserRegistre">"Email"</string>
     <string name="PasswordEnregistre">"Saisir un mot de passe"</string>
     <string name="PasswordConfirm">"Confirmer mot de passe"</string>
     <string name="btnConfirmer">"S'enregistrer"</string>
     <string name="btnAnuler">"Annuler"</string>
-    <string name="title_activity_home">"Home"</string>
-    <string name="navigation_drawer_open">"Open navigation drawer"</string>
-    <string name="navigation_drawer_close">"Close navigation drawer"</string>
-    <string name="nav_header_title">"Android Studio"</string>
-    <string name="nav_header_subtitle">"android.studio@android.com"</string>
-    <string name="nav_header_desc">"Navigation header"</string>
-    <string name="action_settings">"Settings"</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
-    <string name="menu_home">"Home"</string>
-    <string name="menu_gallery">"Gallery"</string>
-    <string name="menu_slideshow">"Slideshow"</string>
-    <string name="menu_tools">"Tools"</string>
-    <string name="menu_share">"Share"</string>
-    <string name="menu_send">"Send"</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
 
 </resources>

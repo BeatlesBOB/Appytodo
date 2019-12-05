@@ -29,19 +29,18 @@ import java.util.Map;
 public class Registre extends AppCompatActivity {
 
     private static final String TAG ="";
-    EditText user, password, confirmPass;
+    EditText user, password, confirmPass, firstName, lastName;
     private FirebaseAuth mAuth;
     private  FirebaseFirestore db;
-
-
-
-
+    private String prenom, nom, User, pass, pass2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registre);
         mAuth = FirebaseAuth.getInstance();
+        firstName = (EditText) findViewById(R.id.txtFirstName);
+        lastName = (EditText) findViewById(R.id.txtLastName);
         user = (EditText) findViewById(R.id.txtUser);
         password = (EditText) findViewById(R.id.txtPassword);
         confirmPass = (EditText) findViewById(R.id.txtPassword2);
@@ -56,10 +55,16 @@ public class Registre extends AppCompatActivity {
     }
 
     public void Registre (View view) {
-        String User = user.getText().toString();
-        String pass = password.getText().toString();
-        String pass2 = confirmPass.getText().toString();
-        if ((User.length() != 0) && (pass.length() != 0) && (pass2.length() != 0))
+
+
+        prenom = firstName.getText().toString();
+        nom = lastName.getText().toString();
+        User = user.getText().toString();
+        pass  = password.getText().toString();
+        pass2 = confirmPass.getText().toString();
+
+
+        if ((User.length() != 0) && (pass.length() != 0) && (pass2.length() != 0) && (firstName.length() != 0) && (lastName.length() != 0))
         {
 
             if (pass.equals(pass2)) {
@@ -90,9 +95,9 @@ public class Registre extends AppCompatActivity {
                                         Log.d("uid",uid);
 
                                         Map<String, Object> User = new HashMap<>();
-                                        User.put("firstName", "");
-                                        User.put("lastName", email);
-                                        User.put("age", "22");
+                                        User.put("firstName", prenom);
+                                        User.put("lastName", nom);
+                                        User.put("Mail", email);
 
                                         db.collection("users").document(uid)
                                                 .set(User)
