@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">T"estFireBase"</string>
     <string name="login">"Login"</string>
-    <string name="textEmail">"Addrese email"</string>
-    <string name="textPassword">"Code de passe"</string>
+    <string name="textEmail">"Adresse email"</string>
+    <string name="textPassword">"Mot de passe"</string>
     <string name="btnLogin">"Connexion"</string>
     <string name="btnRegistre">"S'enregistrer"</string>
     <string name="title_activity_home">""</string>
 
-    <string name="textEnregistrer">"Creer une compte"</string>
+    <string name="textEnregistrer">"Creer un compte"</string>
     <string name="UserFirstName">"Prenom d'utilisateur"</string>
     <string name="UserLastName">"Nom d'utilisateur"</string>
     <string name="UserRegistre">"Email"</string>
