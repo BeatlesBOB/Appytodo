@@ -83,9 +83,11 @@ public class Registre extends AppCompatActivity {
 
 
 
+
                                     if (user != null) {
                                         // Name, email address, and profile photo Url
                                         String email = user.getEmail();
+
 
 
                                         // The user's ID, unique to the Firebase project. Do NOT use this value to
