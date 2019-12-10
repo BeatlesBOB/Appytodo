@@ -1,68 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="140dp"
+    android:padding="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_margin="3dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="110dp"
+        android:id="@+id/cards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="9dp"
+        android:elevation="6dp"/>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/ticketTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Titre"
+        android:textColor="#2D3A4B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:elevation="10dp"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="195dp">
+    <TextView
+        android:id="@+id/ticketLieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:text="Lieu"
+        android:textSize="15sp"
+        android:elevation="10dp"
+        android:textColor="#AAB141"/>
 
-                <ImageView
-                    android:id="@+id/imageTicket"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@android:color/background_dark" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="220dp"
+        android:elevation="15dp"
+        android:src="@color/colorPrimary" />
 
-            </RelativeLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="5dp"
+        android:elevation="10dp"
+        android:src="@drawable/design_ticket" />
 
-
-            <RelativeLayout
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/titreTicket"
-                    android:textSize="18sp"
-                    android:textColor="#1A1A1A"
-                    android:text="default title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:text="default lieu"
-                    android:id="@+id/lieuTicket"
-                    android:layout_below="@id/titreTicket"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:text="default date"
-                    android:id="@+id/dateTicket"
-                    android:layout_below="@id/lieuTicket"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </RelativeLayout>
-
-            <TextView
-                android:background="#414141"
-                android:layout_marginBottom="7dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"/>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-</LinearLayout>
+</RelativeLayout>
