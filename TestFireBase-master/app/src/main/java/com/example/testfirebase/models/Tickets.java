@@ -7,11 +7,12 @@ public class Tickets {
     private String id;
     private String auteurId;
     private String titre;
-    private Date date;
+    private String date;
     private String image;
     private String lieu;
+    private String desc;
 
-    public Tickets(String id, String auteurId,String titre,Date date, String image,String lieu)
+    public Tickets(String id, String auteurId,String titre,String date, String image,String lieu, String desc)
     {
         this.auteurId = auteurId;
         this.date = date;
@@ -19,6 +20,7 @@ public class Tickets {
         this.image=image;
         this.lieu = lieu;
         this.titre=titre;
+        this.desc=desc;
     }
 
     public String getId() {
@@ -33,7 +35,7 @@ public class Tickets {
         return titre;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -41,12 +43,15 @@ public class Tickets {
         return image;
     }
 
+    public String getDesc() {
+        return desc;
+    }
+
     public String getLieu() {
         return lieu;
     }
 
     public String toString() {
-
         return titre;
     }
 
