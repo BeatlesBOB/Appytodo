@@ -7,6 +7,12 @@
     tools:context=".ExtendTicket"
     android:orientation="vertical"
     android:gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/txttitre"
+        android:text="TITRE"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -30,12 +36,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:id="@+id/txtdate"
+        android:text="Date"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/txtlieu"
+        android:text="lieu"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:id="@+id/txtdesc"
         android:text="DESCRIPTION"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@drawable/ic_launcher_background"
+        android:id="@+id/imgtick"/>
 
 </LinearLayout>
