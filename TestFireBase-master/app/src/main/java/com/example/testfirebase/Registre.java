@@ -65,7 +65,7 @@ public class Registre extends AppCompatActivity {
 
 
         if ((User.length() != 0) && (pass.length() != 0) && (pass2.length() != 0) && (firstName.length() != 0) && (lastName.length() != 0))
-        {
+            {
 
             if (pass.equals(pass2)) {
 
@@ -73,6 +73,7 @@ public class Registre extends AppCompatActivity {
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                    System.out.print(task);
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d(TAG, "createUserWithEmail:success");

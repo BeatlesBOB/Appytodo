@@ -52,11 +52,12 @@ public class activity_ticket_registre extends AppCompatActivity {
         String idUser = user.getUid();
 
         Map<String, Object> Ticket = new HashMap<>();
-        Ticket.put("nom", NomData);
-        Ticket.put("group", GroupData);
-        Ticket.put("date", DateData);
-        Ticket.put("description", DescriptionData);
-        Ticket.put("lieu", LieuData);
+        Ticket.put("nomTicket", NomData);
+        Ticket.put("groupTicket", GroupData);
+        Ticket.put("dateTicket", DateData);
+        Ticket.put("imageTicket", "https://www.freshnrebel.com/wp-content/uploads/fnr-ss-selfiestick-bl2.jpg");
+        Ticket.put("descTicket", DescriptionData);
+        Ticket.put("lieuTicket", LieuData);
         Ticket.put("auteurTicket", idUser);
 
         db.collection("tickets").document().set(Ticket).addOnSuccessListener(new OnSuccessListener<Void>() {
