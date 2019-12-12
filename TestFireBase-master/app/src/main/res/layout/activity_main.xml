@@ -8,41 +8,41 @@
 
     <EditText
         android:id="@+id/textEmail"
-        android:layout_width="307dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="268dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="45dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/textEmail"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/textPassword"
-        android:layout_width="307dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="45dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/textPassword"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEmail"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textEmail" />
 
     <Button
         android:id="@+id/btnConnexion"
-        android:layout_width="170dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="45dp"
         android:onClick="Connexion"
         android:text="@string/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,18 +59,18 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/condiment"
         android:text="@string/login"
-        android:textSize="30sp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="100dp"
         android:onClick="Registre"
         android:text="@string/btnRegistre"
         app:layout_constraintEnd_toEndOf="parent"

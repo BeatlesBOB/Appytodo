@@ -49,14 +49,29 @@ public class HomeFragment extends Fragment implements TicketAdapter.OnTicketList
 
     private HomeViewModel homeViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+        recyclerview= root.findViewById(R.id.recyclerview);
+        recyclerview.setLayoutManager(new LinearLayoutManager((getActivity())));
+        adapter =  new TicketAdapter(this.getContext() ,items, this);
+        recyclerview.setAdapter(adapter);
+
+
+        return root;
+
+
+
+    }
+
+    public void funtion (){
+
 
         db = FirebaseFirestore.getInstance();
 
-        recyclerview= root.findViewById(R.id.recyclerview);
+
 
 
 //
@@ -94,13 +109,14 @@ public class HomeFragment extends Fragment implements TicketAdapter.OnTicketList
         }
 
 
-        recyclerview.setLayoutManager(new LinearLayoutManager((getActivity())));
-        adapter =  new TicketAdapter(this.getContext() ,items, this);
-        recyclerview.setAdapter(adapter);
 
-
-        return root;
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        funtion ();
+    }
+
 
 
     @Override
