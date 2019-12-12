@@ -21,7 +21,7 @@ public class ExtendTicket extends AppCompatActivity {
     private static final String TAG = "Extend";
     TextView tickettitre,ticketdate,ticketdesc,ticketlieu;
     ImageView ticketimg;
-    Button supprimerTicket;
+    Button supprimerTicket,modifierticket;
     private FirebaseFirestore db;
 
     @Override
@@ -32,11 +32,11 @@ public class ExtendTicket extends AppCompatActivity {
         final Intent intent = getIntent();
         final String ticket_id = intent.getStringExtra("ticket id");
         String ticket_auteurid = intent.getStringExtra("ticket auteurid");
-        String ticket_titre = intent.getStringExtra("ticket titre");
-        String ticket_date = intent.getStringExtra("ticket date");
+        final String ticket_titre = intent.getStringExtra("ticket titre");
+        final String ticket_date = intent.getStringExtra("ticket date");
         String ticket_image = intent.getStringExtra("ticket image");
-        String ticket_lieu = intent.getStringExtra("ticket lieu");
-        String ticket_desc = intent.getStringExtra("ticket desc");
+        final String ticket_lieu = intent.getStringExtra("ticket lieu");
+        final String ticket_desc = intent.getStringExtra("ticket desc");
 
         db = FirebaseFirestore.getInstance();
 
@@ -45,7 +45,9 @@ public class ExtendTicket extends AppCompatActivity {
         ticketdesc = findViewById(R.id.txtdesc);
         ticketlieu = findViewById(R.id.txtlieu);
         ticketimg = findViewById(R.id.imgtick);
+
         supprimerTicket = findViewById(R.id.suppTicket);
+        modifierticket = findViewById(R.id.modifTicket);
 
         tickettitre.setText(ticket_titre);
         ticketdate.setText(ticket_date);
@@ -73,6 +75,19 @@ public class ExtendTicket extends AppCompatActivity {
                         });
                 Intent intent1 = new Intent(ExtendTicket.this, Home.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent1);
+
+            }
+        });
+
+
+        modifierticket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ExtendTicket.this, ModifTicket.class);
+                intent.putExtra("ticket id",ticket_id);
+
+                startActivity(intent);
 
             }
         });

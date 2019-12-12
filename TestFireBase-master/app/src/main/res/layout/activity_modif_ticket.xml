@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_ticket_registre">
+    tools:context=".ModifTicket">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,11 +13,11 @@
 
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/modtextView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
-            android:text="Nouveau Ticket"
+            android:text="Modifier le Ticket"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.509"
@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/nomTicket"
+            android:id="@+id/modnomTicket"
             android:layout_width="347dp"
             android:layout_height="61dp"
             android:layout_marginTop="64dp"
@@ -34,10 +34,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/modtextView4" />
 
         <EditText
-            android:id="@+id/groupTicket"
+            android:id="@+id/modgroupTicket"
             android:layout_width="347dp"
             android:layout_height="61dp"
             android:layout_marginTop="16dp"
@@ -46,10 +46,10 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nomTicket" />
+            app:layout_constraintTop_toBottomOf="@+id/modnomTicket" />
 
         <EditText
-            android:id="@+id/dateTicket"
+            android:id="@+id/moddateTicket"
             android:layout_width="347dp"
             android:layout_height="61dp"
             android:layout_marginTop="12dp"
@@ -61,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@+id/groupTicket" />
 
         <EditText
-            android:id="@+id/descriptionTicket"
+            android:id="@+id/moddescriptionTicket"
             android:layout_width="347dp"
             android:layout_height="105dp"
             android:ems="10"
@@ -73,20 +73,20 @@
             app:layout_constraintTop_toBottomOf="@+id/dateTicket" />
 
         <EditText
-        android:id="@+id/lieuTicket"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Lieu"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTicket" />
+            android:id="@+id/modlieuTicket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:ems="10"
+            android:hint="Lieu"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTicket" />
 
         <EditText
-            android:id="@+id/participantTicket"
+            android:id="@+id/modparticipantTicket"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -96,7 +96,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lieuTicket" />
         <Button
-            android:id="@+id/btn_save"
+            android:id="@+id/modbtn_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"

@@ -1,4 +1,3 @@
-
 package com.example.testfirebase;
 
 import androidx.annotation.NonNull;
@@ -27,7 +26,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.HashMap;
 import java.util.Map;
 
-public class activity_ticket_registre extends AppCompatActivity {
+public class ModifTicket extends AppCompatActivity {
 
     EditText nom, group, date, description, lieu,participant;
     String NomData, GroupData, DateData, DescriptionData, LieuData, ParticipantData, ParticipantData2;
@@ -37,14 +36,14 @@ public class activity_ticket_registre extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ticket_registre);
+        setContentView(R.layout.activity_modif_ticket);
 
-        nom = (EditText) findViewById(R.id.nomTicket);
-        group = (EditText) findViewById(R.id.groupTicket);
-        date = (EditText) findViewById(R.id.dateTicket);
-        description = (EditText) findViewById(R.id.descriptionTicket);
-        lieu = (EditText) findViewById(R.id.lieuTicket);
-        participant = findViewById(R.id.participantTicket);
+        nom = (EditText) findViewById(R.id.modnomTicket);
+        group = (EditText) findViewById(R.id.modgroupTicket);
+        date = (EditText) findViewById(R.id.moddateTicket);
+        description = (EditText) findViewById(R.id.moddescriptionTicket);
+        lieu = (EditText) findViewById(R.id.modlieuTicket);
+        participant = findViewById(R.id.modparticipantTicket);
         db = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
     }
@@ -52,6 +51,9 @@ public class activity_ticket_registre extends AppCompatActivity {
     public void UpdateTicket() {
         FirebaseUser user = mAuth.getCurrentUser();
         String idUser = user.getUid();
+
+        final Intent intent = getIntent();
+        final String ticket_id = intent.getStringExtra("ticket id");
 
         Map<String, Object> Ticket = new HashMap<>();
         Ticket.put("nomTicket", NomData);
@@ -61,26 +63,24 @@ public class activity_ticket_registre extends AppCompatActivity {
         Ticket.put("descTicket", DescriptionData);
         Ticket.put("lieuTicket", LieuData);
         Ticket.put("participantTicket", ParticipantData2);
-
-
         Ticket.put("auteurTicket", idUser);
 
-        db.collection("tickets").document().set(Ticket).addOnSuccessListener(new OnSuccessListener<Void>() {
+        db.collection("tickets").document(ticket_id).set(Ticket).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
 
-                Toast.makeText(activity_ticket_registre.this, "Creation reussi.",
+                Toast.makeText(ModifTicket.this, "Creation reussi.",
                         Toast.LENGTH_SHORT).show();
-                onBackPressed();
 
-
+                Intent intent = new Intent(ModifTicket.this, Home.class);
+                startActivity(intent);
 
 
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(activity_ticket_registre.this, "Creation non reussi.",
+                Toast.makeText(ModifTicket.this, "Creation non reussi.",
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -110,8 +110,6 @@ public class activity_ticket_registre extends AppCompatActivity {
                                 }
                             } else {
                                 Log.d("TEST", "Error getting documents: ", task.getException());
-                                ParticipantData2 = "";
-                                UpdateTicket();
 
                             }
                         }
