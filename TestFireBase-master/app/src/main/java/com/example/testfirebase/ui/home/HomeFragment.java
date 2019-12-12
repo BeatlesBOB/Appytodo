@@ -104,6 +104,29 @@ public class HomeFragment extends Fragment implements TicketAdapter.OnTicketList
                             }
                         }
                     });
+
+            db.collection("tickets")
+                    .whereEqualTo("participantTicket" , uid)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    Log.d("TEST", document.getId() + " => " + document.getData());
+                                    Tickets nTicket=new Tickets(document.getId(),document.getString("auteurTicket"),document.getString("nomTicket"),document.getString("dateTicket"),document.getString("imageTicket"),document.getString("lieuTicket"),document.getString("descTicket"));
+
+                                    items.add(nTicket);
+
+
+                                    recyclerview.removeAllViews();
+
+                                }
+                            } else {
+                                Log.d("TEST", "Error getting documents: ", task.getException());
+                            }
+                        }
+                    });
         }
 
 
