@@ -68,11 +68,9 @@ public class HomeFragment extends Fragment implements TicketAdapter.OnTicketList
 
     public void funtion (){
 
+        items.clear();
 
         db = FirebaseFirestore.getInstance();
-
-
-
 
 //
 //        items.add("deux titre");
