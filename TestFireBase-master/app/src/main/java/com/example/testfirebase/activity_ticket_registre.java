@@ -66,8 +66,9 @@ public class activity_ticket_registre extends AppCompatActivity {
 
                 Toast.makeText(activity_ticket_registre.this, "Creation reussi.",
                         Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent(activity_ticket_registre.this, Home.class);
-                startActivity(intent2);
+                onBackPressed();
+
+
 
 
             }
