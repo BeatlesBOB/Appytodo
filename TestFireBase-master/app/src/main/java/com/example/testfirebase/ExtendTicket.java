@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.text.method.ScrollingMovementMethod;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -52,6 +53,8 @@ public class ExtendTicket extends AppCompatActivity {
         ticketlieu.setText(ticket_lieu);
         ticketdesc.setText(ticket_desc);
         Picasso.get().load(ticket_image).into(ticketimg);
+
+        ticketdesc.setMovementMethod(new ScrollingMovementMethod());
 
         supprimerTicket.setOnClickListener(new View.OnClickListener() {
             @Override
