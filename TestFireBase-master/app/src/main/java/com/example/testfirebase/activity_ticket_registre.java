@@ -82,6 +82,7 @@ public class activity_ticket_registre extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(activity_ticket_registre.this, "Creation non reussi.",
                         Toast.LENGTH_SHORT).show();
+                onBackPressed();
             }
         });
 
@@ -123,4 +124,6 @@ public class activity_ticket_registre extends AppCompatActivity {
 
 
 
+
 }
+

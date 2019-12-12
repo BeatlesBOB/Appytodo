@@ -1,74 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExtendTicket"
-    android:orientation="vertical"
-    android:gravity="center">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:id="@+id/txttitre"
-        android:text="TITRE"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/txtorganisateur"
-            android:text="ORGANISATEUR"
-            android:gravity="center"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:id="@+id/txtdate"
-        android:text="Date"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:id="@+id/txtlieu"
-        android:text="lieu"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:id="@+id/txtdesc"
-        android:text="DESCRIPTION"/>
+    tools:context=".ExtendTicket">
 
     <ImageView
+        android:id="@+id/imgtick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_background"
-        android:id="@+id/imgtick"/>
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/txttitre"
+        android:text="TITRE"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgtick"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtorganisateur"
+        android:text="ORGANISATEUR"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/txttitre"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtdate"
+        android:text="Date"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtorganisateur"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/txtdesc"
+        android:paddingLeft="15dp"
+        android:text="DESCRIPTION"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/txtdate"
+        android:layout_marginTop="30dp"
+        />
+
+    <TextView
+        android:id="@+id/txtlieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lieu"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtdesc"/>
 
     <Button
         android:id="@+id/suppTicket"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:text="Supprimer Ticket"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtdesc"
         />
 
     <Button
         android:id="@+id/modifTicket"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Modifier le  Ticket" />
+        android:layout_marginTop="10dp"
+        android:text="Modifier Ticket"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suppTicket"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
