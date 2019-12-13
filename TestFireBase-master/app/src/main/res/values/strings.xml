@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">T"estFireBase"</string>
+    <string name="app_name">AppyToDo</string>
     <string name="login">"Login"</string>
     <string name="textEmail">"Adresse email"</string>
     <string name="textPassword">"Mot de passe"</string>
