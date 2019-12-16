@@ -11,36 +11,42 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <!--            android:backgroundTint="@color/"-->
+        <!--            android:visibility="gone"-->
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
-            android:text="Nouveau Ticket"
-            android:textSize="30sp"
+        <ImageView
+            android:id="@+id/imageTicket"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <Button
+            android:id="@+id/buttonAddImage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Ajouter une image"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.509"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"/>
+
 
         <EditText
             android:id="@+id/nomTicket"
             android:layout_width="347dp"
             android:layout_height="61dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Nom de ticket"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonAddImage" />
 
         <EditText
             android:id="@+id/groupTicket"
             android:layout_width="347dp"
             android:layout_height="61dp"
-            android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="Group name"
             android:inputType="textPersonName"
@@ -52,7 +58,6 @@
             android:id="@+id/dateTicket"
             android:layout_width="347dp"
             android:layout_height="61dp"
-            android:layout_marginTop="12dp"
             android:ems="10"
             android:hint="Date d'evenement"
             android:inputType="textPersonName"
@@ -63,7 +68,7 @@
         <EditText
             android:id="@+id/descriptionTicket"
             android:layout_width="347dp"
-            android:layout_height="105dp"
+            android:layout_height="61dp"
             android:ems="10"
             android:gravity="start|top"
             android:hint="Description Ticket"
@@ -73,17 +78,17 @@
             app:layout_constraintTop_toBottomOf="@+id/dateTicket" />
 
         <EditText
-        android:id="@+id/lieuTicket"
-        android:layout_width="347dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:hint="Lieu"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTicket" />
+            android:id="@+id/lieuTicket"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:ems="10"
+            android:hint="Lieu"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTicket" />
 
         <EditText
             android:id="@+id/participantTicket"
