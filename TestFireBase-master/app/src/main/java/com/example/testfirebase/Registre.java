@@ -34,6 +34,11 @@ public class Registre extends AppCompatActivity {
     private  FirebaseFirestore db;
     private String prenom, nom, User, pass, pass2;
 
+    /**
+     * Methode que permets initialiser les variables au moment de la cration d'activity
+     * @author Pedro Miguel
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +54,21 @@ public class Registre extends AppCompatActivity {
 
     }
 
+
+    /**
+     * Methode qui permets de retourner à l'activity de Login
+     * @author Pedro Miguel
+     * @param view
+     */
     public void Annuler (View view){
         Intent intent = new Intent(Registre.this, MainActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * Methode qui permets de registrer un nouvel utilisateur avec Firebase Autentification
+     * @param view
+     */
     public void Registre (View view) {
 
 
@@ -88,9 +103,6 @@ public class Registre extends AppCompatActivity {
                                     if (user != null) {
                                         // Name, email address, and profile photo Url
                                         String email = user.getEmail();
-
-
-
                                         // The user's ID, unique to the Firebase project. Do NOT use this value to
                                         // authenticate with your backend server, if you have one. Use
                                         // FirebaseUser.getIdToken() instead.

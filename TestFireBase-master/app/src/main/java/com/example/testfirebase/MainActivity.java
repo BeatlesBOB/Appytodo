@@ -41,10 +41,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Methode que permets de changer d'activity
+     * @author Pedro Miguel
+     * @param view
+     */
+
     public void Registre (View view){
         Intent intent = new Intent(MainActivity.this, Registre.class);
         startActivity(intent);
     }
+
+    /**
+     * Methode que permets de se connecter avec firebase Autentification
+     * @author Pedro Miguel
+     * @param view
+     */
 
     public void Connexion (View view) {
 

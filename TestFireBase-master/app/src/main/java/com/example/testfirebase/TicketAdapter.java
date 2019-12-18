@@ -16,12 +16,23 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+/**
+ * Class qui permets afficher tous les donnes d'un ticket dans le composants de cards
+ * @author Nathanael
+ */
 
 public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.ViewHolder> {
 
     private LayoutInflater layoutInflater;
     private List<Tickets> data;
     private OnTicketListener mOnTicketListener;
+
+    /**
+     * Methode qui permets d'initialiser les variables
+     * @param context
+     * @param data
+     * @param onTicketListener
+     */
 
     public TicketAdapter(Context context, List<Tickets> data, OnTicketListener onTicketListener){
 
@@ -39,6 +50,11 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.ViewHolder
         return new ViewHolder(view,mOnTicketListener);
     }
 
+    /**
+     * Methode qui permets transmettre les donnes au composants
+     * @param viewHolder
+     * @param i
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Tickets mont = data.get(i);
@@ -57,12 +73,18 @@ public class TicketAdapter extends RecyclerView.Adapter<TicketAdapter.ViewHolder
 
     }
 
+    /**
+     * Méthode qui donne la dimension de tableau de donnes
+     * @return quantite des elements
+     */
     @Override
     public int getItemCount() {
         return data.size();
     }
 
-
+    /**
+     * Class qui donne l'action au composants au moment de s'afficher
+     */
     public class ViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener{
 
         TextView txttitre,txtlieu,txtdate;

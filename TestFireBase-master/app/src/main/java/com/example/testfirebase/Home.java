@@ -28,6 +28,10 @@ public class Home extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private RecyclerView recyclerView;
 
+    /**
+     * Methode qui permets montrer tous les composants dans l'activity home
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

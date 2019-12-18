@@ -26,6 +26,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Class pour le registre et modification de ticket
+ * @author Nathanel
+ */
+
 public class activity_ticket_registre extends AppCompatActivity {
 
     EditText nom, group, date, description, lieu,participant;
@@ -48,6 +53,9 @@ public class activity_ticket_registre extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
     }
 
+    /**
+     * Méthode qui permet mettre à jour l'etat d'un ticket et ses details en utilisant l'id de registre
+     */
     public void UpdateTicket() {
         FirebaseUser user = mAuth.getCurrentUser();
         String idUser = user.getUid();
@@ -85,6 +93,10 @@ public class activity_ticket_registre extends AppCompatActivity {
 
     }
 
+    /**
+     * Methode qui permets de creer un neuvel ticket en fireStore
+     * @param view
+     */
     public void Registre(View view) {
         NomData = nom.getText().toString();
         GroupData = group.getText().toString();

@@ -24,6 +24,10 @@ public class ExtendTicket extends AppCompatActivity {
     Button supprimerTicket;
     private FirebaseFirestore db;
 
+    /**
+     * Dans le méthoe onCreate on recupere les paramètres envoyé par l'activity precedent
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,9 @@ public class ExtendTicket extends AppCompatActivity {
         ticketlieu.setText(ticket_lieu);
         ticketdesc.setText(ticket_desc);
         Picasso.get().load(ticket_image).into(ticketimg);
+        /**
+         * On suprime un ticket avec cet parti du code en utilisant le Id de ticket
+         */
 
         supprimerTicket.setOnClickListener(new View.OnClickListener() {
             @Override
