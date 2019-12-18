@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.text.method.ScrollingMovementMethod;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -59,6 +60,8 @@ public class ExtendTicket extends AppCompatActivity {
         /**
          * On suprime un ticket avec cet parti du code en utilisant le Id de ticket
          */
+
+        ticketdesc.setMovementMethod(new ScrollingMovementMethod());
 
         supprimerTicket.setOnClickListener(new View.OnClickListener() {
             @Override
